@@ -9,7 +9,7 @@ module Linear
     end
 
     def make(projection=1)
-      raise "the X and Y values should be equal size." if x.size != y.size
+      raise "the X and Y sizes should be equals." if x.size != y.size
     
       s = slope(x,y) 
       #debug
