@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["john"]
   spec.email         = ["jhelio.jkd@gmail.com"]
   spec.description   = %q{Simple Ruby Linear Regression}
-  spec.summary       = %q{Simple Ruby Linear Regression}
+  spec.summary       = %q{Simple Linear Regression}
   spec.homepage      = "https://github.com/joaohelio"
   spec.license       = "MIT"
 
