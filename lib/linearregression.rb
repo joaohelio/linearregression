@@ -1,6 +1,6 @@
 require "linearregression/version"
 
-module Linear#regression
+module Linear
   class Regression
     attr_reader :x, :y
     def initialize(x: Array.new, y: Array.new)
@@ -12,6 +12,7 @@ module Linear#regression
       raise "the X and Y values should be equal size." if x.size != y.size
     
       s = slope(x,y) 
+      #debug
       puts "y = #{s[:a].round(2)}x + #{s[:b].round(2)}"
 
       s[:a].round(2) * project + s[:b].round(2)
