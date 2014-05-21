@@ -8,13 +8,13 @@ module Linear
       @y=y
     end
 
-    def make(project=1)
+    def make(projection=1)
       raise "the X and Y values should be equal size." if x.size != y.size
     
       s = slope(x,y) 
       #debug
       #puts "y = #{s[:a].round(2)}x + #{s[:b].round(2)}"
-      s[:a].round(2) * project + s[:b].round(2)
+      s[:a].round(2) * projection + s[:b].round(2)
     end
 
   private
