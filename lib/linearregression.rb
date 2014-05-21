@@ -13,8 +13,7 @@ module Linear
     
       s = slope(x,y) 
       #debug
-      puts "y = #{s[:a].round(2)}x + #{s[:b].round(2)}"
-
+      #puts "y = #{s[:a].round(2)}x + #{s[:b].round(2)}"
       s[:a].round(2) * project + s[:b].round(2)
     end
 
@@ -27,7 +26,7 @@ module Linear
       mx = (x.reduce(:+) / n)
       my = (y.reduce(:+) / n)
 
-      #sloop 
+      #angular coefficient 
       b = (exy - (n * mx * my)) / (ex_2 - (n * mx**2))
       #linear coefficient
       a = my - (b * mx)
