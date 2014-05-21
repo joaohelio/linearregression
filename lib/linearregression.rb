@@ -1,6 +1,6 @@
 require "linearregression/version"
 
-module Linearregression
+module Linear#regression
   class Regression
     attr_reader :x, :y
     def initialize(x: Array.new, y: Array.new)
