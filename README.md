@@ -18,7 +18,7 @@ Or install it yourself as:
 
 ## Usage
 
-lr = Linearregression::Regression.new(x: [1,2,3], y: [4,6,8,10])
+lr = Linear::Regression.new(x: [1,2,3], y: [4,6,8,10])
 
 lr.make(30)
 
