@@ -18,9 +18,16 @@ Or install it yourself as:
 
 ## Usage
 
-lr = Linear::Regression.new(x: [1,2,3], y: [4,6,8,10])
+lr = Linear::Regression.new({1 => 2, 3 => 4, 5 => 6})
 
-lr.make(30)
+#Hash keys match X values
+lr.x
+
+#Hash values match X values
+lr.y
+
+#make projection
+lr.projection(30)
 
 ## Contributing
 

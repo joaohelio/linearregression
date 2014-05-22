@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe Linear::Regression do
   before do
-    @lr = Linear::Regression.new(x: [1,2,3], y: [4,6,8])
+    @lr = Linear::Regression.new({1 => 2, 3 => 4, 5 => 6})
   end
   
   it 'X values should be array' do

@@ -3,18 +3,16 @@ require "linearregression/version"
 module Linear
   class Regression
     attr_reader :x, :y
-    def initialize(x: Array.new, y: Array.new)
-      @x=x
-      @y=y
+    def initialize(h = {})
+      @x=h.keys
+      @y=h.values
     end
 
-    def make(projection=1)
-      raise "the X and Y sizes should be equals." if x.size != y.size
-    
+    def projection(p = 1)
       s = slope(x,y) 
       #debug
       #puts "y = #{s[:a].round(2)}x + #{s[:b].round(2)}"
-      s[:a].round(2) * projection + s[:b].round(2)
+      s[:a].round(2) * p + s[:b].round(2)
     end
 
   private
