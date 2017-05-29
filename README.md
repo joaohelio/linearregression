@@ -2,32 +2,18 @@
 
 Simple Ruby implementation of Linear Regression 
 
-## Installation
-
-Add this line to your application's Gemfile:
-
-    gem 'linearregression'
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install linearregression
-
 ## Usage
 
 lr = Linear::Regression.new({1 => 2, 3 => 4, 5 => 6})
 
-#Hash keys match X values
-lr.x
+###Hash keys match X values
+$ lr.x
 
-#Hash values match Y values
-lr.y
+###Hash values match Y values
+$ lr.y
 
-#make projection
-lr.projection(30)
+###make projection
+$ lr.projection(30)
 
 ## Contributing
 
