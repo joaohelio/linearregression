@@ -4,16 +4,19 @@ Simple Ruby implementation of Linear Regression
 
 ## Usage
 
-lr = Linear::Regression.new({1 => 2, 3 => 4, 5 => 6})
+`lr = Linear::Regression.new({1 => 2, 3 => 4, 5 => 6})`
 
-###Hash keys match X values
-$ lr.x
+*Hash keys match X values*
 
-###Hash values match Y values
-$ lr.y
+`lr.x`
 
-###make projection
-$ lr.projection(30)
+*Hash values match Y values*
+
+`lr.y`
+
+*make projection*
+
+`lr.projection(30)`
 
 ## Contributing
 
