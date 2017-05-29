@@ -8,6 +8,12 @@ module Linear
       @y=h.values
     end
 
+    def []=(key,value)
+      return if key.nil? or value.nil?
+      @x.push key
+      @y.push value
+    end
+
     def projection(p = 1)
       s = slope(x,y) 
       #debug
