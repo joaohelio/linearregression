@@ -17,8 +17,8 @@ module Linear
     def projection(p = 1)
       s = slope(x,y) 
       #debug
-      #puts "y = #{s[:a].round(2)}x + #{s[:b].round(2)}"
-      s[:a].round(2) * p + s[:b].round(2)
+      puts "y = #{s[:a]} + #{s[:b]} * #{p}"
+      (s[:a] + s[:b] * p).round(2)
     end
 
   private
@@ -31,10 +31,10 @@ module Linear
       my = (y.reduce(:+) / n)
 
       #angular coefficient 
-      b = (exy - (n * mx * my)) / (ex_2 - (n * mx**2))
+      ac = (exy - (n * mx * my)) / (ex_2 - (n * mx**2))
       #linear coefficient
-      a = my - (b * mx)
-      {a: a, b: b}
+      lc = my - (ac * mx)
+      {a: lc, b: ac}
     end
 
     def xy(x, y)
