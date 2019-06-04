@@ -1,24 +1,27 @@
 require 'spec_helper'
 
-describe Linear::Regression do
-  before do
-    @lr = Linear::Regression.new({1 => 2, 3 => 4, 5 => 6})
-  end
-  
-  it 'X values should be array' do
-    @lr.x.is_a? Array
-  end
-  
-  it 'Y values should be array' do
-    @lr.y.is_a? Array
-  end
+describe Linear::Regression, '#projection' do
+  let(:data) {
+    { 
+      1 => 1000,
+      2 => 2000,
+      3 => 3000,
+      4 => 4000,
+      5 => 5000,
+      6 => 6000,
+      7 => 7000,
+      8 => 8000,
+    }
+  }
 
-  it 'X and Y should be same size' do
-    @lr.x.size == @lr.y.size
-  end
+  subject { described_class.new(data) }
 
-  it '#make should be return float value' do
-    @lr.make(30).is_a? Float
-  end
+  context 'when is a valid value' do
+    it 'should return a new projection' do
+      expect(subject.projection(9)).to eq(BigDecimal(9_000))
+      expect(subject.projection(10)).to eq(BigDecimal(10_000))
+      expect(subject.projection(11)).to eq(BigDecimal(11_000))
+    end
+  end  
   
 end
