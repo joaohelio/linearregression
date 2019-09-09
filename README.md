@@ -6,8 +6,6 @@ Simple Ruby implementation of Linear Regression
 
 `lr = Linear::Regression.new({1 => 2, 3 => 4, 5 => 6})`
 
-*projection*
-
 `lr.projection(30)`
 
 ## Contributing
